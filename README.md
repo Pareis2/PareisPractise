@@ -1,2 +1,2 @@
 # PareisPractise
-For me to practice Programming
+For me to practice programming
