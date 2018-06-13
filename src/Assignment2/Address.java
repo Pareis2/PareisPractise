@@ -2,59 +2,49 @@ package Assignment2;
 
 public class Address {
 
-    String respodentAddress;
-    String correspondenceAddress;
-    String email;
-    String department;
+    public String respodentAddress;
+    public String correspondenceAddress;
+    public String email;
+    public String department;
 
-    public Address(String RespodentAddress, String CorrespondenceAddress, String Email, String Department)
-    {
+    public Address(String RespodentAddress, String CorrespondenceAddress, String Email, String Department) {
         this.correspondenceAddress = CorrespondenceAddress;
         this.respodentAddress = RespodentAddress;
         this.email = Email;
         this.department = Department;
     }
 
-    public String getCorrespondenceAddress()
-    {
+    public String getCorrespondenceAddress() {
         return this.correspondenceAddress;
     }
-    public void setCorrespondenceAddress(String correspondenceAddress)
-    {
+
+    public void setCorrespondenceAddress(String correspondenceAddress) {
         this.correspondenceAddress = correspondenceAddress;
     }
 
-    public String getRespodentAddress()
-    {
+    public String getRespodentAddress() {
         return this.respodentAddress;
     }
-    public void setRespodentAddress(String respodentAddress)
-    {
+
+    public void setRespodentAddress(String respodentAddress) {
         this.respodentAddress = respodentAddress;
     }
 
-    public String getEmail()
-    {
+    public String getEmail() {
         return this.email;
     }
-    public void setEmail(String email)
-    {
+
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public String getDepartment()
-    {
+    public String getDepartment() {
         return this.department;
     }
-    public void setDepartment(String department)
-    {
+
+    public void setDepartment(String department) {
         this.department = department;
     }
-
-
-
-
-
 
 
 }

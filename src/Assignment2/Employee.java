@@ -5,79 +5,69 @@ import java.util.Date;
 
 public class Employee {
 
-     Long id;
-       Date dob;
-       int age;
-       BigDecimal salary;
-       String fname;
-       String lname;
+    public Long id;
+    public Date dob;
+    public int age;
+    public BigDecimal salary;
+    public String firstName;
+    public String lastName;
 
 
-
-    public Employee(String fname, String lname)
-    {
-        this.fname = fname;
-        this.lname = lname;
+    public Employee(String firstName, String lastName, BigDecimal salary, int age, Date dob, Long id ) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
+        this.age = age;
+        this.dob = dob;
+        this.id = id;
 
     }
 
-    public String getLname()
-    {
-        return this.lname;
+    public String getLname() {
+        return this.lastName;
     }
 
-    public void setLname(String Lname)
-    {
-        this.lname = lname;
+    public void setLname(String Lname) {
+        this.lastName = lastName;
     }
 
-    public String getFname()
-    {
-        return this.fname;
+    public String getFname() {
+        return this.firstName;
     }
 
-    public void setFname(String fname)
-    {
-        this.fname = fname;
+    public void setFname(String fname) {
+        this.firstName = fname;
     }
 
-    public BigDecimal getSalary()
-    {
+    public BigDecimal getSalary() {
         return this.salary;
     }
 
-    public void setSalary(BigDecimal salary)
-    {
+    public void setSalary(BigDecimal salary) {
         this.salary = salary;
     }
 
-    public int getAge()
-    {
+    public int getAge() {
         return this.age;
     }
 
-    public void setAge(int age)
-    {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public Date getDob()
-    {
+    public Date getDob() {
         return this.dob;
     }
 
-    public void setDob(Date dob)
-    {
+    public void setDob(Date dob) {
         this.dob = dob;
     }
 
-    public Long getId()
-    {
+    public Long getId() {
         return this.id;
     }
 
-    public void setId(Long id)
-    {
+    public void setId(Long id) {
         this.id = id;
     }
 

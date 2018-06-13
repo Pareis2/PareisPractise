@@ -5,7 +5,8 @@ import java.util.Collections;
 import java.util.List;
 
 
-public class SortEmployees {
+public class SortNumbers {
+
 
     public static void main (String[] args)
     {
