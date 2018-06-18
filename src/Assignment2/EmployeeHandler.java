@@ -1,19 +1,22 @@
 package Assignment2;
 
-import java.util.Date;
+import Assignment2.Employee;
+
 import java.text.SimpleDateFormat;
-import java.text.ParseException;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.time.LocalDate;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.lang.Long;
+
+public class EmployeeHandler extends Employee  {
 
 
-
-
-public class EmployeeHandler extends Employee {
-
-    EmployeeHandler(String firstName, String lastName, BigDecimal salary, int age, Date dob, Long id)
+    public EmployeeHandler(String firstName, String lastName, BigDecimal salary, int age, Date dob, Long id)
     {
         super(firstName, lastName, salary, age, dob,id);
+
     }
 
     public String getfirstName() {
@@ -34,28 +37,21 @@ public class EmployeeHandler extends Employee {
 
     public Date getDoB() {
         return dob;
-    }
-    //public long getId(){return id;}
 
+    public long getId(){return id;}
+
+    public String toString() {
+        return firstName + lastName + age + dob + salary;
+    }
 
     public static void main(String[] args) {
 
+        LocalDate date = LocalDate.parse("2018-06-14");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
+
         ArrayList<Employee> emps = new ArrayList<Employee>();
-        emps.add(new Employee("Tim", "Sanders", 60000, 35, new SimpleDateFormat("dd-mm-yyyy").parse("01-01-1983"), 001));
-        emps.add(new Employee("Amelia", "Thompson", 75000, 36, new SimpleDateFormat("dd-mm-yyyy").parse("31-12-1982"), 002));
-        emps.add(new Employee("Frankie", "Paul", 100000, 50, new SimpleDateFormat("dd-mm-yyyy").parse("09-10-1967"), 003));
-
-
-
-
+        emps.add(new Employee("Tim", "Sanders", 60000.00, 35, date = LocalDate.parse("01-01-1983", formatter), 000001));
+        emps.add(new Employee("Amelia", "Thompson", 75000, 36, new SimpleDateFormat("dd-mm-yyyy").parse("31-12-1982"), 000002));
+        emps.add(new Employee("Frankie", "Paul", 100000, 50, new SimpleDateFormat("dd-mm-yyyy").parse("09-10-1967"), 000003));
     }
-
-
-   /*public void add (Employee e)
-   {
-       Employee.add(e.getName(), e);
-
-   }*/
-
-
-}
+}}

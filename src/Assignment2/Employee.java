@@ -7,10 +7,10 @@ public class Employee {
 
     public Long id;
     public Date dob;
-    public int age;
+    public  int age;
     public BigDecimal salary;
     public String firstName;
-    public String lastName;
+   public  String lastName;
 
 
     public Employee(String firstName, String lastName, BigDecimal salary, int age, Date dob, Long id ) {
@@ -26,6 +26,7 @@ public class Employee {
     public String getLname() {
         return this.lastName;
     }
+
 
     public void setLname(String Lname) {
         this.lastName = lastName;
