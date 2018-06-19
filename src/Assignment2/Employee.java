@@ -5,12 +5,12 @@ import java.util.Date;
 
 public class Employee {
 
-    public Long id;
-    public Date dob;
-    public  int age;
-    public BigDecimal salary;
-    public String firstName;
-   public  String lastName;
+    private Long id;
+    private Date dob;
+    private int age;
+    private BigDecimal salary;
+    private String firstName;
+   private String lastName;
 
 
     public Employee(String firstName, String lastName, BigDecimal salary, int age, Date dob, Long id ) {
