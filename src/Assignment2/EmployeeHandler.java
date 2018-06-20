@@ -26,19 +26,67 @@ private List<Employee>employees;
     public Employee employeeWithMaxSalary(){
         BigDecimal maxSal = BigDecimal.ZERO;
         Employee employeeWithMaxSal = null;
-        Employee em = new Employee(){
-            if(maxSal = compareTo(em.getSalary()) < 0;
+        for Employee em = new Employee(){
+            if(maxSal = compareTo(em.getSalary();) < 0;
             maxSal = em.getSalary();
             employeeWithMaxSal = em;
-        }
+        };
         return null;
     }
 
-    public Employee pemployeeWithMinSalary(){return null;}
+    public Employee employeeWithMinSalary(){
+        BigDecimal minSal = BigDecimal.ZERO;
+        Employee employeeWithMinSal = null;
+        for Employee em = new Employee() {
+        if(minSal =compareTo(em.getSalary())< 0
+            minSal >em.getSalary();
+            {
+                minSal = em.getSalary();
+            }
 
-    public Employee employeeWithMaxSalaryInDepartment(String Department){return null;}
+        };
 
-    public Employee employeeWithMinSalaryInDepartment(String Department){return null;}
+        return null;
 
-    public Employee employeeBelongingToDepartment(String Department){return null;}
+    }
+
+    public Employee employeeWithMaxSalaryInDepartment(String Department){
+
+        BigDecimal maxSal = BigDecimal.ZERO;
+        Employee employeeWithMinSalaryInDepartment = null;
+        for Employee em = new Employee(){
+            if(maxSal = compareTo(em.getSalary();)
+                    if (Department =  "DEV");
+                    )
+        }
+
+        return null;
+
+    }
+
+    public Employee employeeWithMinSalaryInDepartment(String Department){
+        BigDecimal minSal = BigDecimal.ZERO;
+        Employee employeeWithMinSalaryInDepartment = null;
+        for Employee em = new Employee(){
+            if( minSal = compareTo(em.getSalary());
+            if(Department = "DEV");
+        }
+
+        return null;}
+
+
+    }
+
+/*    public Employee employeeBelongingToDepartment(String Department){
+
+        String firstname;
+        Employee employeeBelongingToDepartment = null;
+        for (int x = 0; x < list.size(); x++){
+            list.get(x).getDepartment());
+        }
+
+
+
+        return null;}
+        */
 }

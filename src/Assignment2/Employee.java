@@ -11,11 +11,13 @@ public class Employee {
     private BigDecimal salary;
     private String firstName;
    private String lastName;
+   private String department;
 
 
-    public Employee(String firstName, String lastName, BigDecimal salary, int age, Date dob, Long id ) {
+    public Employee(String firstName, String lastName, String department, BigDecimal salary, int age, Date dob, Long id ) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.department =department;
         this.salary = salary;
         this.age = age;
         this.dob = dob;
@@ -72,4 +74,11 @@ public class Employee {
         this.id = id;
     }
 
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
 }
