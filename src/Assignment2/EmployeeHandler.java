@@ -158,10 +158,10 @@ public class EmployeeHandler   {
     }
 
 
-    public Employee oldestEmployeeInAGivenDepartmentWhoEarnsTheGivenSalary(int givenSalary){
+    public Employee oldestEmployeeInAGivenDepartmentWhoEarnsTheGivenSalary(int givenSalary, String department){
 
         int maxAge = 0;
-        String department;
+
 
         List<Employee> olderEmployeeInDepartmentWithGivenSalary = new ArrayList<>();
         for( int i = 0; i < employees.size(); i++){
