@@ -17,6 +17,8 @@ public class EmployeeCompratorDemo {
         employees.add(new Employee("Car", "Diesel", "DEV", 1000, 70, new Date(1949, 05, 07), Long.valueOf("0009")));
         employees.add(new Employee("Water", "Fire", "DEV", 2000, 80, new Date(1939, 01, 03), Long.valueOf(0010)));
 
+
+
         //sort by age
         Collections.sort(employees, new Comparator<Employee>() {
             @Override
@@ -34,6 +36,6 @@ public class EmployeeCompratorDemo {
         });
 
 
-
     }
 }
+
