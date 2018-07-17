@@ -1,6 +1,11 @@
 package Assignment2;
 import java.util.*;
 import java.util.Comparator;
+import java.util.function.Function;
+import java.util.function.ToDoubleFunction;
+import java.util.function.ToIntFunction;
+import java.util.function.ToLongFunction;
+import java.util.stream.Collectors;
 
 public class EmployeeCompratorDemo {
     public static void main(String[]args){
@@ -17,10 +22,23 @@ public class EmployeeCompratorDemo {
         employees.add(new Employee("Car", "Diesel", "DEV", 1000, 70, new Date(1949, 05, 07), Long.valueOf("0009")));
         employees.add(new Employee("Water", "Fire", "DEV", 2000, 80, new Date(1939, 01, 03), Long.valueOf(0010)));
 
+        Set<Employee>hashSet = new HashSet<Employee>(employees);
 
+        /*Map<age, fname> hashMap = new HashMap<Employee>();
+        for (Employee employee : employees){
+            hashMap.put(Age, fName);
+        }*/
+
+        Map<String, Integer> mapNameAge = employees.stream().collect(Collectors.toMap(employees -> employees.getFname(), employees -> employees.getAge()));
+        //System.out.println(mapNameAge);
 
         //sort by age
         Collections.sort(employees, new Comparator<Employee>() {
+            @Override
+            public Comparator<Employee> reversed() {
+                return null;
+            }
+
             @Override
             public int compare(Employee o1, Employee o2) {
                 return o1.getAge() - o2.getAge();
@@ -30,12 +48,24 @@ public class EmployeeCompratorDemo {
         //sort by salary
         Collections.sort(employees, new Comparator<Employee>() {
             @Override
+            public Comparator<Employee> reversed() {
+                return null;
+            }
+
+            @Override
             public int compare(Employee o1, Employee o2) {
                 return o1.getSalary().compareTo(o2.getSalary());
             }
-        });
+        }
+
+
 
 
     }
+
 }
+
+
+
+
 
