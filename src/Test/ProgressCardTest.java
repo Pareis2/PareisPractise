@@ -1,4 +1,5 @@
-package Assignment3;
+package Test;
+import Assignment3.Student;
 import org.junit.*;
 import static org.junit.Assert.*;
 
@@ -6,9 +7,34 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ProgressCardTest  {
 
-    @org.junit.jupiter.api.Test
-    void main() {
+
+     void main() {
         Student student = new Student();
+
+        @BeforeClass
+        public void before(){
+            System.out.println("Before Class");
+         }
+
+        @AfterClass
+        public void after(){
+            System.out.println("After Class");
+         }
+         
+        @Before
+        public void setUp(){
+            System.out.println("Before");
+            student = new Student();
+        }
+
+        @After
+        public void finish(){
+
+            System.out.println("After");
+            student = new Student();
+         }
+
+
 
         @Test
         public void testId() throws Exception{
