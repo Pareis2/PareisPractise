@@ -33,11 +33,11 @@ public class Student {
         this.fName = fName;
     }
 
-    public String getLname() {
+    public String getlnName() {
         return lname;
     }
 
-    public void setLname(String lname) {
+    public void setlName(String lname) {
         this.lname = lname;
     }
 

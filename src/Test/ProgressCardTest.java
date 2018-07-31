@@ -3,7 +3,7 @@ import Assignment3.Student;
 import org.junit.*;
 import static org.junit.Assert.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+//import static org.junit.jupiter.api.Assertions.*;
 
 class ProgressCardTest  {
 
@@ -20,7 +20,7 @@ class ProgressCardTest  {
         public void after(){
             System.out.println("After Class");
          }
-         
+
         @Before
         public void setUp(){
             System.out.println("Before");
@@ -35,28 +35,33 @@ class ProgressCardTest  {
          }
 
 
+        @Test
+        void exception(){
+            Throwable exception = expectThrows(IllegalArgumentException.class, () -> Student.setId("23"));
+            assertEquals("Id must be an Integer.", exception.getMessage());
+         }
 
         @Test
-        public void testId() throws Exception{
-        //set id
-            this.student.setId("111");
-            Assert.assertEquals("'invalid id'", "111", this.student.id);
-
-        }
+         void nameCheck() {
+             Student student = new Student(fName);
+             String fName = "Larry";
+             assertEquals(fName, student.getfName());
+         }
 
         @Test
-        // set age
-        Assert.assertEquals("Age must be over 10.", 0, this.student.age);
+        void gradeCheck(){
+             ProgressCard progress = new ProgressCard();
+             assumeTrue("90".equals.getGrade("A"));
+         }
+
 
         @Test
          //invalid age
-                 public void testInvalidAge(){
+         public void testInvalidAge(){
             Student student1 = new Student;
+             this.student1.setAge(-5);
             thrown.expect(IllegalArgumentException.class);
-            thrown.expectMessage("Age can't be a negative number.");
-            this.student1.setAge(-5);
-
-
+            assertFalse("Age can't be a negative number.");
 
         }
 
