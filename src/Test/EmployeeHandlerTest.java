@@ -4,6 +4,7 @@ import Assignment2.Employee;
 import Assignment2.EmployeeCompratorDemo;
 import Assignment2.EmployeeHandler;
 import com.sun.xml.internal.bind.XmlAccessorFactory;
+import java.util.Comparator;
 
 import java.util.*;
 
@@ -15,90 +16,47 @@ import static org.junit.Assert.*;
 public class EmployeeHandlerTest {
 
 
-
-    void main() {
-
-        @BeforeClass
-        public void before(){
-        }
-
-        @AfterClass
-        public void after(){
-        }
-
-        @Before
-        public void setUp(){
-        }
-
-        @After
-        public void tearDown(){
-        }
-
-
         @Test
-        public void test_array_pass()
-        {
-            List<String> actual = Arrays.asList("a", "b", "c");
-            List<String> expected = Arrays.asList("a", "b", "c");
-
-            assertThat(actual, is(expected));
-            assertThat(actual, is(not(expected)));
-        }
-        @Test
-        void ageCheck(){
+       public void ageCheck(){
             Employee employee1 = new Employee();
             employee1.setAge(12);
             assertEquals(12);
-
-
         }
+        
 
         @Test
-        void nameCheck() {
-            Employee employee2 = new Employee(firstName);
-            String firstName = "Larry";
-            assertEquals(fName, employee2.getfName());
+        public void addToMapTest() throws Exception {
+            Employee employee = new Employee();
+            employee.addEmployee("Larry", 43);
+            employee.addEmployee("Susy", 68);
+            int size = employee.hashMap.size();
+            assertEquals("Incorrect collection size ", 2, size);
         }
+
+
 
         @Test
-        void testMap(){
-            Map<String, int> map = new HashMap<>();
-            map.put("Ted",40);
-            map.put("Xander", 50);
-            map.put("Jeff", 60);
-
-            Map<String, int> expected = new HashMap<>();
-            expected.put("Ted",40);
-            expected.put("Xander", 50);
-            expected.put("Jeff", 60);
-
-            assertThat(map, is(expected));
-
+        public void nameTest{
+                public Employee name = new Employee();
+            assertEquals("Tim", name.getFname() );
         }
 
-        @Test
-                void testObject(){
-            Employee emp = new Employee("Tim", "Davos", "DEV", 1000, 30, new Date(1989, 10, 05), Long.valueOf(0001));
+    @Test
+    public void shouldRemoveEmployeeById() {
+        Employee employee1 = new Employee( "Tim", "Davos","DEV", 1000, 30, new Date(1989, 10, 05), Long.valueOf(0001) );
+        Employee employee3 = new Employee("Tim", "Davos","TST", 2000, 31, new Date(1988, 10, 05), Long.valueOf(0002) );
+        Employee employee4 = new Employee("Tim", "Davos","FIN", 3000, 32, new Date(1987, 10, 05), Long.valueOf(0003) );
+        Employee employee2 = new Employee("Tim", "Davos","DEV", 4000, 33, new Date(1986, 10, 05), Long.valueOf(0004) );
+        Employee employees = new Employee(list(employee1, employee2, employee3, employee4));
 
-            assertThat(emp, hasProperty("firstName"));
-            assertThat(emp, hasProperty("firstName", is("Tim")));
-        }
+        employees.remove(2);
 
-        @Test
-        void testComparator(){
-            Employee first = new Employee();
-            Employee second = new Employee():
-
-            int result = areaCompare.compare(first, second);
-            assertTrue =
-
-
-        }
-
-
-
-
-
+        assertEquals(3, employees.size());
+        assertTrue(employees.contains(employee1));
+        assertThat(employees).extracting("id").containsOnly(0001, 0004, 0003);
+        assertThat(employees).extracting("firstName").contains("tim");
 
     }
-}
+
+    }
+
