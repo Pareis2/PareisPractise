@@ -5,17 +5,19 @@ import java.util.Date;
 
 public class Employee {
 
-    public Long id;
-    public Date dob;
-    public int age;
-    public BigDecimal salary;
-    public String firstName;
-    public String lastName;
+    private Long id;
+    private Date dob;
+    private int age;
+    private int salary;
+    private String firstName;
+   private String lastName;
+   private String department;
 
 
-    public Employee(String firstName, String lastName, BigDecimal salary, int age, Date dob, Long id ) {
+    public Employee(String firstName, String lastName, String department, int salary, int age, Date dob, Long id ) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.department = department;
         this.salary = salary;
         this.age = age;
         this.dob = dob;
@@ -26,6 +28,7 @@ public class Employee {
     public String getLname() {
         return this.lastName;
     }
+
 
     public void setLname(String Lname) {
         this.lastName = lastName;
@@ -39,11 +42,11 @@ public class Employee {
         this.firstName = fname;
     }
 
-    public BigDecimal getSalary() {
+    public int getSalary() {
         return this.salary;
     }
 
-    public void setSalary(BigDecimal salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 
@@ -71,4 +74,11 @@ public class Employee {
         this.id = id;
     }
 
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
 }
